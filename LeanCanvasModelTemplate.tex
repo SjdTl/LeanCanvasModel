@@ -1,0 +1,88 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{fontawesome5}
+
+\begin{document}
+\tikzstyle{block} = [rectangle, rounded corners,
+minimum width=4cm,
+minimum height=1cm,
+text centered, 
+draw=black,
+align = center,
+text width = 3.75 cm]
+\resizebox{\linewidth}{!}{
+
+\scriptsize{
+\begin{tikzpicture}
+    \node (problem) [block, minimum height = 10 cm] at (0,0) {
+    
+        \textbf{Problem \faIcon{question}} \\
+        \textit{List your top 1-3 problems} \\
+        \vspace{5mm}
+        \textbf{Existing alternatives} \\
+        \textit{List how these problems are solved today}
+    };
+
+    \node(solution) [block, minimum height = 5 cm, anchor = north west] at (problem.north east) {
+    
+        \textbf{Solution \faIcon{check-square}} \\
+        \textit{Outline a possible solution for each problem}
+    };
+
+    \node(key_metrics) [block, minimum height = 5 cm, anchor = north] at (solution.south) {
+    
+        \textbf{Key metrics \faIcon{key}} \\
+        \textit{List the key number that tell you how your business is doing}
+    };
+
+    \node(unique_value_proposition) [block, minimum height = 10 cm, anchor = north west] at (solution.north east) {
+    
+        \textbf{Unique value proposition \faIcon{gem}} \\
+        Lorem ipsum dolor sit amet \\
+        \vspace{5mm}
+        \textbf{High-level concept} \\
+        \textit{List your X for Y analogy e.g. YouTube = FLickr for vidoes}
+    };
+
+    \node(unfair_advantage) [block, minimum height = 5 cm, anchor = north west] at (unique_value_proposition.north east) {
+    
+        \textbf{Unfair advantage \faIcon{balance-scale-right}} \\
+        \textit{Something that cannot easily be bought or copied}
+    };
+
+    \node(channels) [block, minimum height = 5 cm, anchor = north] at (unfair_advantage.south) {
+    
+        \textbf{Channels \faIcon{road}} \\
+        \textit{List your path to customers (inbound or outbound)}
+    };
+
+    \node(customer_segments) [block, minimum height = 10 cm, anchor = north west] at (unfair_advantage.north east) {
+    
+        \textbf{Customer segments \faIcon{users}} \\
+        \textit{List your target customers and users} \\
+        \vspace{5mm}
+        \textbf{Early adopters} \\
+        \textit{List the characteristics of your ideal customers}
+    };
+
+    % --------------------------------
+    % BOTTOM TWO BLOCKS
+    % --------------------------------
+    
+    \node(cost_structure) [block, minimum height = 3 cm, minimum width = 10cm, anchor = north west, text width = 9.5 cm] at (problem.south west) {
+    
+        \textbf{Cost structure \faIcon{receipt}} \\
+        \textit{List your fixed and variable costs}
+    };
+
+    \node(revenue_streams) [block, minimum height = 3 cm, minimum width = 10cm, anchor = west, text width = 9.5 cm] at (cost_structure.east) {
+    
+        \textbf{Revenue streams \faIcon{coins}} \\
+        \textit{List your sources of revenue}
+    };
+\end{tikzpicture}
+}
+}
+\end{document}
